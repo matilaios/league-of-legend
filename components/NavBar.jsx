@@ -9,7 +9,7 @@ import HomePage from '../pages/HomePage';
 
 const NavBar = () => {
     return <>
-<Navbar bg="dark" data-bs-theme="dark">
+<Navbar bg="dark" data-bs-theme="dark" img src="">
 <Container>
           <Navbar.Brand><Link to={'/'}>Page d'accueil</Link></Navbar.Brand>
           <Nav className="me-auto">

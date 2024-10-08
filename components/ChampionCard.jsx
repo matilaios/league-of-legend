@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const  ChampionCard = ({championCard}) => {
-console.log(championCard)
+// console.log(championCard)
     const navigate=useNavigate();
 
     const navigateTo=(id)=>{
@@ -22,6 +22,9 @@ console.log(championCard)
       <Card.Img variant="top" src={"https://ddragon.leagueoflegends.com/cdn/14.19.1/img/champion/"+championCard.image.full} />
       <Card.Body>
         <Card.Title>{championCard.name}</Card.Title>
+        <Card.Text>
+          {championCard.title}
+        </Card.Text>
         <Card.Text>
           {championCard.blurb}
         </Card.Text>

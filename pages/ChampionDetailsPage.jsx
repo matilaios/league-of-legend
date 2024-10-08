@@ -2,7 +2,7 @@ import ChampionService from "../services/ChampionService.js";
 import ChampionCard from "../components/ChampionCard";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 
 
 const ChampionDetailsPage = () => {
@@ -30,13 +30,22 @@ useEffect(() => {
 
     return <>
     
-    <Container>
+    <div className="img-perso">
+
     <h1>personnage : {id} </h1>
     
+    <img style={{ width: '30%' }}  src={"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"  + champion.name + "_0.jpg"} 
+     alt={"imgchamps" + champion} />
 
-    <p>{champion.blurb}</p>
+    <p style={{width:'30%'} }>{champion.blurb}</p>
+
     
-    </Container>
+
+</div>
+
+   
+    
+    
 
 
     </>;

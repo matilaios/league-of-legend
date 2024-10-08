@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ChampionService from "../services/ChampionService.js";
 import ChampionCard from "../components/ChampionCard";
+import { Container } from "react-bootstrap";
 
 
 const HomePage = () => {
@@ -24,27 +25,26 @@ const HomePage = () => {
         }, [])
 
 
-        return <>
+        return <Container className="d-flex flex-column align-items-center">
 
-            <h1>Page d'accueil</h1>
+            <h1>Champions</h1>
             
             <div className="d-flex justify-content-center flex-wrap gap-4 my-5 col-10">
             {Object.entries(champions).map((champion) => {
-                console.log(champion)
+                // console.log(champion)
 
-                return<>
-                <ChampionCard championCard={champion[1]} key={champion[1].id}></ChampionCard>
-
+                return <ChampionCard championCard={champion[1]} key={champion[1].id}></ChampionCard>
 
 
-                </>
+
+                
             }
             
         
         )}
               </div>  
-
-                </>
+</Container>;
+                
     }
 
     export default HomePage;
