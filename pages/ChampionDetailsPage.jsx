@@ -2,6 +2,7 @@ import ChampionService from "../services/ChampionService.js";
 import ChampionCard from "../components/ChampionCard";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 
 const ChampionDetailsPage = () => {
@@ -13,7 +14,7 @@ const [champion, setChampion]= useState({});
 
 const fetchAllDetailsChampion = async () => {
     try {const response = await ChampionService.getAllDetailsChampion(id);
-        console.log(response)
+       setChampion(Object.entries(response.data.data)[0][1])
         
 
 
@@ -23,14 +24,21 @@ const fetchAllDetailsChampion = async () => {
 
 }
 useEffect(() => {
-    fetchAllDetailsChampion(id);
+    fetchAllDetailsChampion();
    
 }, [])
 
     return <>
     
+    <Container>
     <h1>personnage : {id} </h1>
     
+
+    <p>{champion.blurb}</p>
+    
+    </Container>
+
+
     </>;
 }
  
