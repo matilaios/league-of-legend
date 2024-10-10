@@ -1,6 +1,26 @@
 .img-perso{
-    background-color: lightgoldenrodyellow;
+   
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    justify-content: center;
+    padding-left: 5rem;
+    
+    min-height: 150vh;
+        background: pink
+        url(desktop-wallpaper-teemo-league-of-legends-full.jpg);
+        background-size: cover;
+        min-height: 100vh;
 }
+
+
+    .card:hover{
+        cursor: pointer;
+        background: rgb(182, 255, 253);
+        z-index: 1;
+        box-shadow: 10px 10px 10px 10px rgb(103, 10, 112) ;
+        transform: scale(1.2);
+    }
+
+
+

@@ -27,9 +27,11 @@ const HomePage = () => {
 
         return <Container className="d-flex flex-column align-items-center">
 
+<div className="body-homepage">
+
             <h1>Champions</h1>
             
-            <div className="d-flex justify-content-center flex-wrap gap-4 my-5 col-10">
+            <div className="d-flex justify-content-center flex-wrap gap-4 my-5">
             {Object.entries(champions).map((champion) => {
                 // console.log(champion)
 
@@ -43,6 +45,7 @@ const HomePage = () => {
         
         )}
               </div>  
+              </div>
 </Container>;
                 
     }

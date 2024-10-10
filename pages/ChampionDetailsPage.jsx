@@ -29,21 +29,30 @@ useEffect(() => {
 }, [])
 
     return <>
-    
+    <div>
     <div className="img-perso">
 
-    <h1>personnage : {id} </h1>
+    <h1>{id} </h1>
     
-    <img style={{ width: '30%' }}  src={"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"  + champion.name + "_0.jpg"} 
+    <img style={{ width: '30rem' }}  src={"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"  + champion.name + "_0.jpg"} 
      alt={"imgchamps" + champion} />
 
-    <p style={{width:'30%'} }>{champion.blurb}</p>
+    <p style={{width:'30%'} }>{champion.lore}</p>
 
-    
+    {champion.spells && champion.spells.map((spell, index)=>{
+
+        return <div key={index}> 
+        <p> {spell.name}</p> 
+        <p> {spell.description}</p>
+        </div>
+})}
+
+
+        
 
 </div>
 
-   
+</div>
     
     
 

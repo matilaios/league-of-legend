@@ -9,7 +9,16 @@ import HomePage from '../pages/HomePage';
 
 const NavBar = () => {
     return <>
-<Navbar bg="dark" data-bs-theme="dark" img src="">
+<Navbar bg="transparent">
+<Navbar.Brand>
+            <img
+              src="icone.webp"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="logo"
+            />
+          </Navbar.Brand>
 <Container>
           <Navbar.Brand><Link to={'/'}>Page d'accueil</Link></Navbar.Brand>
           <Nav className="me-auto">
